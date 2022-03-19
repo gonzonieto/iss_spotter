@@ -39,7 +39,7 @@ const fetchISSFlyOverTimes = (geoData, callback) => {
     if (error) {
       console.log("In here!");
       return callback(error, null);
-    };
+    }
 
     if (response.statusCode !== 200) {
       const msg = `Status Code ${response.statusCode} when fetching flyover times. Response: ${flyOver}.`;
