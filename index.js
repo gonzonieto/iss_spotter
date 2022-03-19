@@ -12,6 +12,8 @@ const nextISSTimesForMyLocation = () => {
       fetchISSFlyOverTimes(geoData, (flyOverError, flyOverTimes) => {
         if (flyOverError) return console.log(flyOverError);
 
+        console.log("IP:", ip);
+
         flyOverTimes.forEach((pass) => {
           const dateTime = new Date(0);
           dateTime.setUTCSeconds(pass.risetime);
